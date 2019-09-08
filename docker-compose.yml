@@ -1,0 +1,36 @@
+version: '2.4'
+
+services:
+
+  nginx-adminer:
+    image: nginx:alpine
+    container_name: nginx-adminer
+    depends_on:
+     - adminer
+    restart: unless-stopped
+    volumes:
+     - ./conf.d:/etc/nginx/conf.d:ro
+     - ./.htpasswd:/etc/nginx/.htpasswd:ro
+     - ./logs:/var/log/nginx
+    networks:
+     - default
+     - outside
+    environment:
+      VIRTUAL_HOST: ${DOMAINS}
+      LETSENCRYPT_HOST: ${DOMAINS}
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL} 
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: unless-stopped
+    networks:
+     - default
+
+networks:
+  default:
+    external:
+      name: ${INTERNAL:-internal-adminer}
+  outside:
+    external:
+      name: ${SERVICES_TO_PROXY:-services}
