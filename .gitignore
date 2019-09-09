@@ -1,3 +1,6 @@
 .env
 *.DS_Store
 .htpasswd
+*.logs
+logs/access.log
+logs/error.log

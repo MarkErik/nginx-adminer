@@ -19,10 +19,10 @@ You will be asked to supply and confirm a password for the user.
 Check the file:
 cat .htpasswd
 
-## Step 4: Update the .env.sample file with your configuration options
-Then:
-mv .env.sample .env
+## Step 4: Copy the .env.sample to .env and update with your configuration options
+cp .env.sample .env
+nano .env
 
 ## Step 5: Run the script to start the services
-The script checks for the .env file and also create the internal docker network.
+The script checks for the .env file and also creates the internal docker network.
 ./start-adminer.sh
