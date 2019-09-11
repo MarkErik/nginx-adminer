@@ -3,7 +3,7 @@ version: '2.4'
 services:
 
   nginx-adminer:
-    image: nginx:alpine
+    image: nginx:latest
     container_name: nginx-adminer
     depends_on:
      - adminer
@@ -27,7 +27,7 @@ services:
     networks:
      - default
     environment:
-      ADMINER_DESIGN: "mancave"
+      ADMINER_DESIGN: "lucas-sandery"
 
 networks:
   default:
