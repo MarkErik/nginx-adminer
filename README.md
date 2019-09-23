@@ -1,7 +1,7 @@
 # Warning, this is still very much in-progress, hence the incomplete documentation and many spelling mistakes!
 
 # Running Adminer with HTTPS behind proxy and password
-## For Ubuntu 18.04 LTS, to connect to databases running on the remote machine.
+### For Ubuntu 18.04 LTS, to connect to databases running on the remote machine.
 
 Assuming docker, docker-compose already installed.
 You'll need aser account with sudo permissions.
