@@ -1,9 +1,12 @@
 # Warning, this is still very much in-progress, hence the incomplete documentation and many spelling mistakes!
 
 # Running Adminer with HTTPS behind proxy and password
-For Ubuntu 18.04 LTS, to connect to databases running on the remote machine.
+## For Ubuntu 18.04 LTS, to connect to databases running on the remote machine.
+
 Assuming docker, docker-compose already installed.
-User account with sudo permissions. Useful with 
+You'll need aser account with sudo permissions.
+
+Designed to operate in a server where you also have: 
 https://github.com/jwilder/nginx-proxy
 and https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion
 
@@ -12,8 +15,8 @@ sudo apt-get update
 sudo apt-get install apache2-utils
 
 ## Step 2: close this repo
-(whereever you normally clone your repos into)
-git clone https://github.com/MarkErik/nginx-adminer.git
+(wherever you normally clone your repos into)
+git clone https://github.com/MarkErik/nginx-adminer
 
 ## Step 3: Create the .htpasswd file that will be used to provide an additional layer of security
 sudo htpasswd -c .htpasswd USERNAME
