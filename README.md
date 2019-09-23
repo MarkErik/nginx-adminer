@@ -1,5 +1,7 @@
+# Warning, this is still very much in-progress, hence the incomplete documentation and many spelling mistakes!
+
 # Running Adminer with HTTPS behind proxy and password
-For Ubunut 18.04 LTS, to connect to databases running on the remote machine.
+For Ubuntu 18.04 LTS, to connect to databases running on the remote machine.
 Assuming docker, docker-compose already installed.
 User account with sudo permissions. Useful with 
 https://github.com/jwilder/nginx-proxy
